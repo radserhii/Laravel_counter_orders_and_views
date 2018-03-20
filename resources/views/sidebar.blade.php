@@ -8,24 +8,9 @@
         <ul class="navbar-nav mr-auto">
             @for ($i=1; $i<6; $i++)
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route('page', ['id' => $i])}}">Page {{$i}} <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{route('page.show', ['id' => $i])}}">Page {{$i}} <span class="sr-only">(current)</span></a>
                 </li>
             @endfor
-            {{--<li class="nav-item active">--}}
-                {{--<a class="nav-link" href="{{route('page', ['id' => 1])}}">Page 1 <span class="sr-only">(current)</span></a>--}}
-            {{--</li>--}}
-            {{--<li class="nav-item active">--}}
-                {{--<a class="nav-link" href="{{route('page', ['id' => 2])}}">Page 2 <span class="sr-only">(current)</span></a>--}}
-            {{--</li>--}}
-            {{--<li class="nav-item active">--}}
-                {{--<a class="nav-link" href="{{route('page', ['id' => 3])}}">Page 3 <span class="sr-only">(current)</span></a>--}}
-            {{--</li>--}}
-            {{--<li class="nav-item active">--}}
-                {{--<a class="nav-link" href="{{route('page', ['id' => 4])}}">Page 4 <span class="sr-only">(current)</span></a>--}}
-            {{--</li>--}}
-            {{--<li class="nav-item active">--}}
-                {{--<a class="nav-link" href="{{route('page', ['id' => 5])}}">Page 5 <span class="sr-only">(current)</span></a>--}}
-            {{--</li>--}}
         </ul>
     </div>
 </nav>
