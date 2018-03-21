@@ -11,6 +11,9 @@
                     <a class="nav-link" href="{{route('page.show', ['id' => $i])}}">Page {{$i}} <span class="sr-only">(current)</span></a>
                 </li>
             @endfor
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('report.show')}}">Report <span class="sr-only">(current)</span></a>
+            </li>
         </ul>
     </div>
 </nav>
