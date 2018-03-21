@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Report;
 
 class Kernel extends ConsoleKernel
 {
@@ -26,6 +27,13 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+//        * * * * * php /path-to-your-project/artisan schedule:run >> /dev/null 2>&1
+//        php artisan schedule:run
+
+        $schedule->call (function() {
+            Report::calculateCr();
+        })->everyFiveMinutes();
     }
 
     /**

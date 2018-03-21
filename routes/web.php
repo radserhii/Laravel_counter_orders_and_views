@@ -14,5 +14,9 @@
 Route::get('/', function () {
     return view('index');
 });
+
 Route::get('page/{id}', 'PageController@index')->name('page.show');
 Route::post('order', 'OrderController@store')->name('order.store');
+
+Route::get('report', 'ReportController@show')->name('report.show');
+
